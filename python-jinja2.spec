@@ -3,11 +3,11 @@
 
 # Enable building without docs to avoid a circular dependency between this
 # and python-sphinx:
-%global with_docs 0
+%global with_docs 1
 
 Name:		%{?scl_prefix}python-jinja2
 Version:	2.8
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	General purpose template engine
 Group:		Development/Languages
 License:	BSD
@@ -85,6 +85,9 @@ rm -rf %{buildroot}
 %{python3_sitelib}/*
 
 %changelog
+* Tue Jul 26 2016 Tomas Orsava <torsava@redhat.com> - 2.8-2
+- Bootstrapping, step 2/2: with_docs 1
+
 * Mon Jul 25 2016 Tomas Orsava <torsava@redhat.com> - 2.8-1
 - Update to 2.8
 - Bootstrapping, step 1/2: with_docs 0
