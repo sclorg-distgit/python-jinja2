@@ -3,11 +3,11 @@
 
 # Enable building without docs to avoid a circular dependency between this
 # and python-sphinx:
-%global with_docs 0
+%global with_docs 1
 
 Name:		%{?scl_prefix}python-jinja2
 Version:	2.9.6
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	General purpose template engine
 Group:		Development/Languages
 License:	BSD
@@ -86,6 +86,9 @@ rm -rf %{buildroot}
 %exclude %{python3_sitelib}/jinja2/_debugsupport.c
 
 %changelog
+* Mon Jun 19 2017 Charalampos Stratakis <cstratak@redhat.com> - 2.9.6-2
+- Rebuild with docs
+
 * Fri Jun 16 2017 Charalampos Stratakis <cstratak@redhat.com> - 2.9.6-1
 - Update to 2.9.6 for rh-python36
 
